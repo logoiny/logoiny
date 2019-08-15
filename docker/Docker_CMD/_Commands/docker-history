@@ -1,0 +1,20 @@
+docker history --help
+Usage:	docker history [OPTIONS] IMAGE
+Show the history of an image
+
+Options:
+      --format string   Pretty-print images using a Go template
+  -H, --human           Print sizes and dates in human readable format (default true)
+      --no-trunc        Don't truncate output
+  -q, --quiet           Only show numeric IDs
+
+docker history //显示镜像的构建历史记录
+    eg:docker history docker/compose:1.24.1
+        IMAGE               CREATED             CREATED BY                                      SIZE            COMMENT
+        9bd979cced2e        6 weeks ago         /bin/sh -c #(nop)  ENTRYPOINT ["docker-compo…   0B
+        <missing>           6 weeks ago         /bin/sh -c #(nop) COPY file:d5540a52ac403caa…   16.2MB
+        <missing>           6 weeks ago         /bin/sh -c #(nop) COPY file:301779bb5a0b9b10…   37.6MB
+        <missing>           6 weeks ago         /bin/sh -c apk update && apk add --no-cache …   9.72MB
+        <missing>           6 weeks ago         /bin/sh -c #(nop)  ENV GLIBC=2.28-r0            0B
+        <missing>           5 months ago        /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B
+        <missing>           5 months ago        /bin/sh -c #(nop) ADD file:38bc6b51693b13d84…   4.41MB

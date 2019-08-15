@@ -1,0 +1,12 @@
+docker image prune --help
+Usage:	docker image prune [OPTIONS]
+Remove unused images
+
+Options:
+  -a, --all             Remove all unused images, not just dangling ones
+      --filter filter   Provide filter values (e.g. 'until=<timestamp>')
+  -f, --force           Do not prompt for confirmation
+
+docker image -a, --all // 移除所有未使用的镜像，而不仅仅是悬虚镜像
+docker image prune // 移除全部的悬虚镜像
+docker image prune -f, --force  // 移除时不提示确认

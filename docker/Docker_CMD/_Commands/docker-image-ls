@@ -1,0 +1,26 @@
+docker image ls --help
+Usage:	docker image ls [OPTIONS] [REPOSITORY[:TAG]]
+List images
+
+Aliases:
+  ls, images, list
+
+Options:
+  -a, --all             Show all images (default hides intermediate images)
+      --digests         Show digests
+  -f, --filter filter   Filter output based on conditions provided
+      --format string   Pretty-print images using a Go template
+      --no-trunc        Don't truncate output
+  -q, --quiet           Only show numeric IDs
+
+docker image ls -filter dangling=true => dangling 悬虚镜像 没有标签的镜像被称为悬虚镜像 列表中展示为 <none>:<none>
+docker image ls --format "{{.size}}" => 只返回主机镜像的大小属性
+ eg1:
+    output：
+        100MB
+        19.4MB
+  eg2:
+docker image ls --format "{{.Repository}}: {{.Tag}}: {{.size}}"
+    output:
+        ubuntu: latest: 4MB
+        nginx:  latest: 108MB

@@ -1,0 +1,12 @@
+
+Image Registry   //镜像仓库服务 => Docker 客户端的镜像仓库服务是可配置的，默认使用Docker Hub
+Image Repository //镜像仓库 => 镜像仓库服务包含多个镜像
+
+--filter
+dangling 悬虚镜像 没有标签的镜像被称为悬虚镜像 列表中展示为 <none>:<none>
+         可指定为true 或 false,仅返回悬虚镜像（true）,或非悬虚镜像（false)
+before  需要 ImageName 或者 ImageId 作为参数，返回在之前被创建的全部镜像
+since   与 before 类似，返回指定镜像之后创建的全部镜像
+label   根据标注名称或值，对镜像进行过滤，docker image ls 输出中不显示标注内容
+reference   其他的过滤方式
+ eg: docker image ls --filter=reference="*:latest"

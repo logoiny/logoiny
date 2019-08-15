@@ -1,0 +1,18 @@
+docker search --help
+Usage:	docker search [OPTIONS] TERM
+Search the Docker Hub for images
+
+Options:
+-f, --filter filter   Filter output based on conditions provided 【过滤输出的内容】
+--format string   Pretty-print search using a Go template
+--limit int       Max number of search results (default 25)
+--no-trunc        Don't truncate output 【 不截断输出内容】
+
+docker search 默认情况下返回 25 个结果
+--filter
+stars
+    eg: docker search --filter=stars=100 mysql
+is-official => 官方构建
+    eg: docker search --filter=is-official=true mysql
+is-automated => 自动化构建
+    eg: docker search --filter=is-automated=true mysql

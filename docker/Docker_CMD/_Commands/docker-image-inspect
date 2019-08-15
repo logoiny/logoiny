@@ -1,0 +1,98 @@
+docker image inspect --help
+Usage:	docker image inspect [OPTIONS] IMAGE [IMAGE...]
+Display detailed information on one or more images
+
+Options:
+  -f, --format string   Format the output using the given Go template
+
+docker image inspect //显示一个镜像的详细信息
+    eg: docker image inspect hello-world
+        [
+            {
+                "Id": "sha256:fce289e99eb9bca977dae136fbe2a82b6b7d4c372474c9235adc1741675f587e",
+                "RepoTags": [
+                    "hello-world:latest"
+                ],
+                "RepoDigests": [
+                    "hello-world@sha256:6540fc08ee6e6b7b63468dc3317e3303aae178cb8a45ed3123180328bcc1d20f"
+                ],
+                "Parent": "",
+                "Comment": "",
+                "Created": "2019-01-01T01:29:27.650294696Z",
+                "Container": "8e2caa5a514bb6d8b4f2a2553e9067498d261a0fd83a96aeaaf303943dff6ff9",
+                "ContainerConfig": {
+                    "Hostname": "8e2caa5a514b",
+                    "Domainname": "",
+                    "User": "",
+                    "AttachStdin": false,
+                    "AttachStdout": false,
+                    "AttachStderr": false,
+                    "Tty": false,
+                    "OpenStdin": false,
+                    "StdinOnce": false,
+                    "Env": [
+                        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+                    ],
+                    "Cmd": [
+                        "/bin/sh",
+                        "-c",
+                        "#(nop) ",
+                        "CMD [\"/hello\"]"
+                    ],
+                    "ArgsEscaped": true,
+                    "Image": "sha256:a6d1aaad8ca65655449a26146699fe9d61240071f6992975be7e720f1cd42440",
+                    "Volumes": null,
+                    "WorkingDir": "",
+                    "Entrypoint": null,
+                    "OnBuild": null,
+                    "Labels": {}
+                },
+                "DockerVersion": "18.06.1-ce",
+                "Author": "",
+                "Config": {
+                    "Hostname": "",
+                    "Domainname": "",
+                    "User": "",
+                    "AttachStdin": false,
+                    "AttachStdout": false,
+                    "AttachStderr": false,
+                    "Tty": false,
+                    "OpenStdin": false,
+                    "StdinOnce": false,
+                    "Env": [
+                        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+                    ],
+                    "Cmd": [
+                        "/hello"
+                    ],
+                    "ArgsEscaped": true,
+                    "Image": "sha256:a6d1aaad8ca65655449a26146699fe9d61240071f6992975be7e720f1cd42440",
+                    "Volumes": null,
+                    "WorkingDir": "",
+                    "Entrypoint": null,
+                    "OnBuild": null,
+                    "Labels": null
+                },
+                "Architecture": "amd64",
+                "Os": "linux",
+                "Size": 1840,
+                "VirtualSize": 1840,
+                "GraphDriver": {
+                    "Data": {
+                        "MergedDir": "/var/lib/docker/overlay2/fdcee192755cdaab21708817609dc8525a75ae316482db3b0f04d052a50fa2d1/merged",
+                        "UpperDir": "/var/lib/docker/overlay2/fdcee192755cdaab21708817609dc8525a75ae316482db3b0f04d052a50fa2d1/diff",
+                        "WorkDir": "/var/lib/docker/overlay2/fdcee192755cdaab21708817609dc8525a75ae316482db3b0f04d052a50fa2d1/work"
+                    },
+                    "Name": "overlay2"
+                },
+                "RootFS": {
+                    "Type": "layers",
+                    "Layers": [
+                        "sha256:af0b15c8625bb1938f1d7b17081031f649fd14e6b233688eea3c5483994a66a3"
+                    ]
+                },
+                "Metadata": {
+                    "LastTagTime": "0001-01-01T00:00:00Z"
+                }
+            }
+        ]

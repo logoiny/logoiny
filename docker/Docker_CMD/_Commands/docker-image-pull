@@ -1,0 +1,16 @@
+docker image pull --help
+Usage:	docker image pull [OPTIONS] NAME[:TAG|@DIGEST]
+Pull an image or a repository from a registry
+
+Options:
+  -a, --all-tags                Download all tagged images in the repository
+      --disable-content-trust   Skip image verification (default true)
+  -q, --quiet                   Suppress verbose output
+
+
+拉取官方镜像(Docker Hub)
+ docker image pull  NameSpace/ImageName:Tag
+ eg: docker image pull mongo:3.3.11
+拉取非官方镜像
+ docker image pull DnsName/NameSpace/ImageName:Tag
+ eg: docker image pull gcr.io/google-containers/etcd:3.3.10-1

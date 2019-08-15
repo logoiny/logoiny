@@ -1,0 +1,6 @@
+linux
+
+https://github.com/docker/compose/releases  //找到想要安装的版本
+$ curl -L https://github.com/docker/compose/releases/download/1.24.1/run.sh > /usr/local/bin/docker-compose
+$ chmod +x /usr/local/bin/docker-compose
+$ docker-compose --version  //验证 & 查看安装版本
